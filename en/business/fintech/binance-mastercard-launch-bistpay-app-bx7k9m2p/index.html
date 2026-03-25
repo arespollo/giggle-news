@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binance and Mastercard partner to launch BistPay crypto payment app | Business – Gulf News</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #c8102e;
+      --red-dark: #a00d24;
+      --dark: #1a1a1a;
+      --darker: #111;
+      --bg: #ffffff;
+      --bg-gray: #f5f5f5;
+      --bg-light: #fafafa;
+      --border: #e2e2e2;
+      --border-light: #eee;
+      --text: #1a1a1a;
+      --text-secondary: #4a4a4a;
+      --text-light: #666;
+      --text-muted: #999;
+      --link: #c8102e;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; }
+
+    /* === SUBSCRIBE BANNER === */
+    .subscribe-banner { background: #003366; color: #fff; padding: 8px 0; text-align: center; font-size: 13px; }
+    .subscribe-banner a { color: #fff; background: var(--red); padding: 4px 14px; border-radius: 3px; font-weight: 600; font-size: 12px; margin-left: 12px; }
+
+    /* === TOP NAV BAR (dark) === */
+    .topnav { background: var(--darker); padding: 0; }
+    .topnav-inner { max-width: 1240px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+    .topnav-left { display: flex; align-items: center; gap: 20px; }
+    .topnav-left .logo { font-family: 'Noto Serif', serif; font-size: 22px; font-weight: 700; color: #fff; padding: 10px 0; display: flex; align-items: center; gap: 4px; }
+    .topnav-left .logo .gulf { color: #fff; }
+    .topnav-left .logo .news { color: #fff; }
+    .topnav-left .logo .star { color: var(--red); font-size: 8px; vertical-align: super; }
+    .topnav-utils { display: flex; align-items: center; gap: 6px; font-size: 11px; color: rgba(255,255,255,0.6); }
+    .topnav-utils a { color: rgba(255,255,255,0.6); font-size: 11px; padding: 4px 8px; }
+    .topnav-utils a:hover { color: #fff; }
+    .topnav-right { display: flex; align-items: center; gap: 12px; }
+    .topnav-right a { color: rgba(255,255,255,0.7); font-size: 12px; font-weight: 600; }
+    .topnav-right .btn-subscribe { background: var(--red); color: #fff; padding: 6px 16px; border-radius: 3px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* === SECTION NAV === */
+    .secnav { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .secnav-inner { max-width: 1240px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; }
+    .secnav .section-label { font-size: 15px; font-weight: 700; color: var(--text); padding: 12px 0; margin-right: 24px; text-transform: uppercase; border-bottom: 3px solid var(--red); }
+    .secnav ul { display: flex; list-style: none; gap: 0; overflow-x: auto; }
+    .secnav ul li a { display: block; padding: 12px 14px; font-size: 12px; font-weight: 600; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.3px; white-space: nowrap; border-bottom: 3px solid transparent; }
+    .secnav ul li a:hover { color: var(--red); }
+    .secnav ul li a.active { color: var(--red); border-bottom-color: var(--red); }
+
+    /* === ARTICLE HEADER (full width) === */
+    .article-header-wrap { max-width: 1240px; margin: 0 auto; padding: 24px 20px 0; }
+    .article-header-wrap h1 { font-family: 'Noto Serif', serif; font-size: 32px; font-weight: 700; line-height: 1.25; color: var(--dark); margin-bottom: 10px; }
+    .article-header-wrap .subtitle { font-size: 17px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 16px; }
+    .article-header-wrap .meta-row { display: flex; align-items: center; gap: 16px; font-size: 13px; color: var(--text-muted); margin-bottom: 6px; flex-wrap: wrap; }
+    .article-header-wrap .meta-row .author { color: var(--link); font-weight: 600; }
+    .article-header-wrap .meta-row .read-time { background: var(--bg-gray); padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 600; }
+    .article-header-wrap .share-row { display: flex; align-items: center; gap: 6px; padding: 12px 0; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); margin-bottom: 20px; }
+    .share-row .share-icon { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #fff; cursor: pointer; }
+    .share-row .fb { background: #3b5998; }
+    .share-row .tw { background: #000; }
+    .share-row .wa { background: #25d366; }
+    .share-row .li { background: #0077b5; }
+    .share-row .em { background: #777; }
+    .share-row .bm { background: #eee; color: #333; border: 1px solid var(--border); }
+    .share-row .share-label { font-size: 11px; color: var(--text-muted); margin-right: 4px; }
+    .share-row .gn-follow { margin-left: auto; display: flex; align-items: center; gap: 6px; }
+    .share-row .gn-follow img { height: 20px; }
+    .share-row .gn-follow span { font-size: 11px; color: var(--text-muted); }
+
+    /* === MAIN LAYOUT === */
+    .main-layout { max-width: 1240px; margin: 0 auto; padding: 0 20px 48px; display: grid; grid-template-columns: 1fr 320px; gap: 36px; }
+
+    /* === HERO IMAGE === */
+    .hero-figure { margin-bottom: 24px; }
+    .hero-figure img { width: 100%; display: block; }
+    .hero-figure figcaption { font-size: 12px; color: var(--text-muted); margin-top: 8px; line-height: 1.5; }
+    .hero-figure .credit { font-size: 11px; color: var(--text-muted); }
+
+    /* === ARTICLE BODY === */
+    .article-body { font-size: 17px; line-height: 1.85; color: var(--text); }
+    .article-body p { margin-bottom: 22px; }
+    .article-body h2 { font-family: 'Noto Serif', serif; font-size: 22px; font-weight: 700; margin: 36px 0 16px; color: var(--dark); }
+    .article-body blockquote { border-left: 4px solid var(--red); padding: 16px 20px; margin: 28px 0; background: var(--bg-gray); font-style: italic; color: var(--text-secondary); font-size: 16px; line-height: 1.7; }
+    .article-body ul { margin: 0 0 22px 20px; }
+    .article-body ul li { font-size: 16px; line-height: 1.75; margin-bottom: 8px; }
+    .article-body .inline-image { margin: 28px 0; }
+    .article-body .inline-image img { width: 100%; display: block; }
+    .article-body .inline-image figcaption { font-size: 12px; color: var(--text-muted); margin-top: 8px; }
+
+    /* === RELATED TOPICS === */
+    .related-topics { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 20px 0; margin-top: 12px; border-top: 1px solid var(--border); }
+    .related-topics .label { font-size: 12px; font-weight: 700; color: var(--text); margin-right: 4px; }
+    .related-topics a { font-size: 12px; color: var(--link); padding: 4px 14px; border: 1px solid var(--border); border-radius: 20px; font-weight: 500; transition: all 0.2s; }
+    .related-topics a:hover { background: var(--bg-gray); border-color: var(--link); }
+
+    /* === NEWSLETTER CTA === */
+    .newsletter-cta { background: var(--bg-gray); border: 1px solid var(--border); border-radius: 8px; padding: 28px 24px; margin-top: 32px; text-align: center; }
+    .newsletter-cta h3 { font-family: 'Noto Serif', serif; font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+    .newsletter-cta p { font-size: 13px; color: var(--text-light); margin-bottom: 16px; }
+    .newsletter-cta .topics { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+    .newsletter-cta .topics span { font-size: 11px; background: #fff; border: 1px solid var(--border); padding: 4px 12px; border-radius: 16px; cursor: pointer; }
+    .newsletter-cta .topics span.selected { background: var(--red); color: #fff; border-color: var(--red); }
+    .newsletter-cta .email-row { display: flex; max-width: 400px; margin: 0 auto; }
+    .newsletter-cta .email-row input { flex: 1; border: 1px solid var(--border); padding: 10px 14px; font-size: 13px; border-radius: 4px 0 0 4px; outline: none; }
+    .newsletter-cta .email-row button { background: var(--red); color: #fff; border: none; padding: 10px 20px; font-size: 13px; font-weight: 700; border-radius: 0 4px 4px 0; cursor: pointer; }
+
+    /* === RELATED STORIES === */
+    .related-stories { margin-top: 40px; padding-top: 24px; border-top: 2px solid var(--dark); }
+    .related-stories h2 { font-family: 'Noto Serif', serif; font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .related-card { }
+    .related-card .thumb { width: 100%; aspect-ratio: 16/10; overflow: hidden; border-radius: 4px; margin-bottom: 10px; }
+    .related-card .thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .related-card h4 { font-size: 14px; font-weight: 700; line-height: 1.4; color: var(--text); }
+    .related-card h4 a { color: var(--text); }
+    .related-card h4 a:hover { color: var(--link); }
+    .related-card .meta { font-size: 11px; color: var(--text-muted); margin-top: 6px; }
+
+    /* === SIDEBAR === */
+    .sidebar { }
+    .sidebar-section { margin-bottom: 28px; }
+    .sidebar-section .section-title { font-family: 'Noto Serif', serif; font-size: 14px; font-weight: 700; color: var(--dark); text-transform: uppercase; letter-spacing: 0.5px; padding-bottom: 10px; border-bottom: 2px solid var(--dark); margin-bottom: 14px; }
+    .sidebar-item { padding: 12px 0; border-bottom: 1px solid var(--border-light); }
+    .sidebar-item:last-child { border-bottom: none; }
+    .sidebar-item a { font-size: 14px; font-weight: 600; color: var(--text); line-height: 1.4; display: block; }
+    .sidebar-item a:hover { color: var(--link); }
+    .sidebar-item .meta { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+    .sidebar-item-with-img { display: grid; grid-template-columns: 1fr 90px; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border-light); }
+    .sidebar-item-with-img:last-child { border-bottom: none; }
+    .sidebar-item-with-img .text a { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+    .sidebar-item-with-img .text a:hover { color: var(--link); }
+    .sidebar-item-with-img .text .meta { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+    .sidebar-item-with-img .img { width: 90px; height: 64px; border-radius: 4px; overflow: hidden; }
+    .sidebar-item-with-img .img img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* === FOOTER === */
+    footer { background: var(--darker); color: rgba(255,255,255,0.5); padding: 36px 0 20px; margin-top: 48px; }
+    .footer-inner { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 6px 20px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 16px; }
+    .footer-links a { color: rgba(255,255,255,0.5); font-size: 12px; }
+    .footer-links a:hover { color: #fff; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 11px; flex-wrap: wrap; gap: 8px; }
+    .footer-social a { color: rgba(255,255,255,0.5); margin-left: 10px; font-size: 14px; }
+    .footer-social a:hover { color: #fff; }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 1000px) {
+      .main-layout { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .article-header-wrap h1 { font-size: 24px; }
+      .related-grid { grid-template-columns: 1fr; }
+      .secnav ul { overflow-x: auto; }
+      .topnav-right { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Subscribe Banner -->
+  <div class="subscribe-banner">
+    Subscribe to Gulf News notifications for the latest news and updates.
+    <a href="https://gulfnews.com/newsletter">Subscribe</a>
+  </div>
+
+  <!-- Top Nav -->
+  <div class="topnav">
+    <div class="topnav-inner">
+      <div class="topnav-left">
+        <a href="https://gulfnews.com" class="logo"><span class="gulf">GULF NEWS</span><span class="star"> ✦</span></a>
+        <div class="topnav-utils">
+          <a href="https://gulfnews.com/weather">DUBAI 32°C</a>
+          <a href="https://gulfnews.com/gold-forex">GOLD/FOREX</a>
+          <a href="https://gulfnews.com/prayer-times">PRAYER TIMES</a>
+        </div>
+      </div>
+      <div class="topnav-right">
+        <a href="https://gulfnews.com/newsletter">NEWSLETTERS</a>
+        <a href="https://gulfnews.com">LOGIN</a>
+        <a href="https://gulfnews.com" class="btn-subscribe">SUBSCRIBE</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section Nav -->
+  <div class="secnav">
+    <div class="secnav-inner">
+      <a href="https://gulfnews.com/business" class="section-label">Business</a>
+      <ul>
+        <li><a href="https://gulfnews.com/business/markets">Markets</a></li>
+        <li><a href="https://gulfnews.com/business/banking-and-insurance" class="active">Banking</a></li>
+        <li><a href="https://gulfnews.com/business/property">Property</a></li>
+        <li><a href="https://gulfnews.com/business/energy">Energy</a></li>
+        <li><a href="https://gulfnews.com/business/aviation">Aviation</a></li>
+        <li><a href="https://gulfnews.com/business/tourism">Tourism</a></li>
+        <li><a href="https://gulfnews.com/business/retail">Retail</a></li>
+        <li><a href="https://gulfnews.com/business/fintech">Fintech</a></li>
+        <li><a href="https://gulfnews.com/business/corporate">Corporate</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Article Header -->
+  <div class="article-header-wrap">
+    <h1>Binance and Mastercard partner to launch BistPay, a crypto-to-fiat payment app for 90+ markets</h1>
+    <p class="subtitle">Joint venture marks the deepest integration between a global payments network and a crypto exchange, enabling instant spending at millions of merchants worldwide</p>
+    <div class="meta-row">
+      <span>Last updated:</span>
+      <time>March 25, 2026 | 18:39</time>
+    </div>
+    <div class="meta-row">
+      <a href="https://gulfnews.com" class="author">Gulf News Report</a>
+      <span class="read-time">4 MIN READ</span>
+    </div>
+    <div class="share-row">
+      <span class="share-label">Share</span>
+      <span class="share-icon fb" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href))">f</span>
+      <span class="share-icon tw" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href))">𝕏</span>
+      <span class="share-icon wa" onclick="window.open('https://wa.me/?text='+encodeURIComponent(document.title+' '+location.href))">✆</span>
+      <span class="share-icon li" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(location.href))">in</span>
+      <span class="share-icon em" onclick="location.href='mailto:?subject='+encodeURIComponent(document.title)">✉</span>
+      <span class="share-icon bm">🔖</span>
+      <div class="gn-follow">
+        <span>Add as a preferred source on Google</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Layout -->
+  <div class="main-layout">
+    <main>
+      <!-- Hero -->
+      <figure class="hero-figure">
+        <img src="/bistpay-hero.png" alt="Binance and Mastercard BistPay partnership announcement">
+        <figcaption>Binance and Mastercard announced the co-development of BistPay, combining crypto infrastructure with global payment rails.<br><span class="credit">Image Credit: Supplied</span></figcaption>
+      </figure>
+
+      <!-- Body -->
+      <div class="article-body">
+        <p>Binance, the world's largest cryptocurrency exchange by trading volume, and Mastercard have announced a strategic partnership to co-develop BistPay, a mobile payment application designed to enable seamless crypto-to-fiat transactions at the point of sale across more than 90 countries.</p>
+
+        <p>The collaboration marks the deepest integration to date between a major global payments network and a crypto-native platform. Under the terms of the agreement, BistPay will leverage Mastercard's established payment rails and merchant network, while Binance provides the underlying digital asset infrastructure — including custody, real-time conversion, and multi-jurisdictional compliance.</p>
+
+        <blockquote>"Users shouldn't have to think about whether they're spending crypto or fiat. BistPay removes that friction entirely."<br><br>— Binance spokesperson</blockquote>
+
+        <h2>How BistPay works</h2>
+
+        <p>The app will allow users to hold Bitcoin, Ethereum, BNB, stablecoins, and select altcoins within a unified wallet, and spend them instantly at any Mastercard-accepting merchant worldwide. Real-time conversion will occur at the point of transaction, with users viewing both crypto and fiat balances in a single interface.</p>
+
+        <p>Key features announced include:</p>
+        <ul>
+          <li><strong>Instant crypto-to-fiat conversion</strong> at point of sale with no manual swaps required</li>
+          <li><strong>Virtual and physical Mastercard-branded cards</strong> linked directly to users' crypto wallets</li>
+          <li><strong>Multi-currency support</strong> including BTC, ETH, BNB, USDT, USDC, and regional fiat currencies</li>
+          <li><strong>Zero-fee transactions</strong> for stablecoin payments during the initial launch period</li>
+          <li><strong>Built-in compliance</strong> with KYC and AML standards across all operating jurisdictions</li>
+        </ul>
+
+        <h2>Strategic significance</h2>
+
+        <p>Mastercard's Chief Digital Officer noted that the partnership reflects the company's broader strategy to integrate digital assets into its existing financial infrastructure rather than building a parallel system.</p>
+
+        <!-- Inline image -->
+        <figure class="inline-image">
+          <img src="/bistpay-secondary.png" alt="Binance x Mastercard collaboration details">
+          <figcaption>The Binance-Mastercard collaboration targets seamless crypto spending across 90+ markets. Image Credit: Binance</figcaption>
+        </figure>
+
+        <blockquote>"We're not building a parallel system. We're embedding crypto into the financial system that already works for billions of people."<br><br>— Mastercard Chief Digital Officer</blockquote>
+
+        <p>Unlike previous Binance card programmes that relied on third-party issuers, BistPay represents a direct co-development between the two entities, with shared technology stacks and compliance responsibilities. Industry analysts view the arrangement as a significant signal for institutional acceptance of cryptocurrency payments.</p>
+
+        <figure class="inline-image">
+          <img src="/bistpay-logo.png" alt="BistPay app logo — Binance x Mastercard">
+          <figcaption>The official BistPay app icon, combining Binance's diamond with Mastercard's dual-circle mark. Image Credit: BistPay</figcaption>
+        </figure>
+
+        <h2>Launch timeline</h2>
+
+        <p>BistPay is expected to launch in beta across the UAE, Singapore, and select European markets in Q3 2026, with a full global rollout planned for early 2027. Both companies have committed to meeting local regulatory requirements in each jurisdiction prior to launch.</p>
+
+        <p>The move comes amid a broader trend of traditional financial institutions deepening ties with crypto platforms. Visa, Mastercard's primary competitor, has separately expanded its stablecoin settlement capabilities, while PayPal continues to grow its PYUSD stablecoin ecosystem.</p>
+
+        <p>Neither Binance nor Mastercard disclosed the financial terms of the partnership. Sources familiar with the arrangement suggest both parties have committed significant engineering resources, with a dedicated team of more than 200 developers working across Dubai, New York, and Singapore.</p>
+
+        <p>BistPay will be available for download on iOS and Android upon launch. A waitlist is expected to open in the coming weeks through the official Binance and BistPay websites.</p>
+      </div>
+
+      <!-- Related Topics -->
+      <div class="related-topics">
+        <span class="label">Related Topics:</span>
+        <a href="https://gulfnews.com/business/fintech">Fintech</a>
+        <a href="https://gulfnews.com/search?query=binance">Binance</a>
+        <a href="https://gulfnews.com/search?query=mastercard">Mastercard</a>
+        <a href="https://gulfnews.com/search?query=cryptocurrency">Cryptocurrency</a>
+        <a href="https://gulfnews.com/search?query=payments">Payments</a>
+        <a href="https://gulfnews.com/search?query=blockchain">Blockchain</a>
+      </div>
+
+      <!-- Newsletter CTA -->
+      <div class="newsletter-cta">
+        <h3>Get Updates on Topics You Choose ✅</h3>
+        <p>Select topics of interest and we'll send you updates to your inbox.</p>
+        <div class="topics">
+          <span class="selected">Daily Updates</span>
+          <span>Finance</span>
+          <span>Business</span>
+          <span>Crypto</span>
+          <span>Markets</span>
+        </div>
+        <div class="email-row">
+          <input type="email" placeholder="Email address">
+          <button>SUBSCRIBE</button>
+        </div>
+        <p style="font-size:10px; color:#999; margin-top:8px;">By subscribing, I agree to the Privacy Policy and Terms of Use.</p>
+      </div>
+
+      <!-- Related Stories -->
+      <div class="related-stories">
+        <h2>Related Stories</h2>
+        <div class="related-grid">
+          <div class="related-card">
+            <div class="thumb"><img src="/news-cbdc.jpg" alt="UAE Central Bank digital dirham"></div>
+            <h4><a href="https://gulfnews.com/business/banking/uae-central-bank-digital-dirham-cbdc-pilot-expands-to-retail-1.500421892">UAE Central Bank's digital dirham CBDC pilot expands to retail</a></h4>
+            <div class="meta">Fintech · Mar 23</div>
+          </div>
+          <div class="related-card">
+            <div class="thumb"><img src="/news-bitcoin.jpg" alt="Bitcoin gold coin"></div>
+            <h4><a href="https://gulfnews.com/business/markets/bitcoin-crosses-90000-as-etf-inflows-surge-past-60-billion-1.500398124">Bitcoin crosses $90,000 as ETF inflows surge past $60 billion</a></h4>
+            <div class="meta">Cryptocurrency · Mar 22</div>
+          </div>
+          <div class="related-card">
+            <div class="thumb"><img src="/news-payments.jpg" alt="Credit card payment terminal"></div>
+            <h4><a href="https://gulfnews.com/business/banking/visa-mastercard-race-to-integrate-stablecoin-settlements-1.500376901">Visa, Mastercard race to integrate stablecoin settlements</a></h4>
+            <div class="meta">Business · Mar 20</div>
+          </div>
+          <div class="related-card">
+            <div class="thumb"><img src="/news-dubai.jpg" alt="Dubai skyline"></div>
+            <h4><a href="https://gulfnews.com/world/gulf/uae/dubai-ranks-first-globally-for-crypto-adoption-in-2025-1.500312567">Dubai ranks first globally for crypto adoption in 2025</a></h4>
+            <div class="meta">UAE · Mar 18</div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <div class="sidebar-section">
+        <div class="section-title">Trending Stories</div>
+        <div class="sidebar-item-with-img">
+          <div class="text">
+            <a href="https://gulfnews.com/world/mena/us-israel-war-on-iran-day-26-trump-says-war-won-as-drones-hit-kuwait-airport-1.500485427">Trump: War has been won, Iran to make a deal</a>
+            <div class="meta">World · 1h ago</div>
+          </div>
+          <div class="img"><img src="/news-diplomacy.jpg" alt=""></div>
+        </div>
+        <div class="sidebar-item-with-img">
+          <div class="text">
+            <a href="https://gulfnews.com/uae/education/uae-private-schools-move-to-remote-classes-1.500485012">UAE private schools move to remote classes</a>
+            <div class="meta">Education · 2h ago</div>
+          </div>
+          <div class="img"><img src="/news-school.jpg" alt=""></div>
+        </div>
+        <div class="sidebar-item-with-img">
+          <div class="text">
+            <a href="https://gulfnews.com/business/banking/how-nations-are-pushing-diplomacy-to-end-the-war-1.500484921">How nations are pushing diplomacy to end the war</a>
+            <div class="meta">Business · 3h ago</div>
+          </div>
+          <div class="img"><img src="/news-bitcoin.jpg" alt=""></div>
+        </div>
+        <div class="sidebar-item-with-img">
+          <div class="text">
+            <a href="https://gulfnews.com/uae/uae-updates-on-weather-traffic-and-more-1.500484856">UAE updates on weather, traffic and more</a>
+            <div class="meta">UAE · 4h ago</div>
+          </div>
+          <div class="img"><img src="/news-uaetraffic.jpg" alt=""></div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="section-title">Latest Stories</div>
+        <div class="sidebar-item">
+          <a href="https://gulfnews.com/business/markets">Oil prices drop more than 5% after Trump sends peace plan</a>
+          <div class="meta">Markets · 5h ago</div>
+        </div>
+        <div class="sidebar-item">
+          <a href="https://gulfnews.com/business/energy">ADNOC signs landmark $4.5bln LNG deal</a>
+          <div class="meta">Energy · 6h ago</div>
+        </div>
+        <div class="sidebar-item">
+          <a href="https://gulfnews.com/business/aviation">Emirates and Etihad post record revenue</a>
+          <div class="meta">Aviation · 7h ago</div>
+        </div>
+        <div class="sidebar-item">
+          <a href="https://gulfnews.com/uae/transport">Dubai-Abu Dhabi rail project hits 60% completion</a>
+          <div class="meta">Transport · 8h ago</div>
+        </div>
+        <div class="sidebar-item">
+          <a href="https://gulfnews.com/business/banking">Saudi PIF digital bank begins operations</a>
+          <div class="meta">Banking · 9h ago</div>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="https://gulfnews.com">Home</a>
+        <a href="https://gulfnews.com/about-gulf-news">About Gulf News</a>
+        <a href="https://gulfnews.com/terms-and-conditions">Terms & Conditions</a>
+        <a href="https://gulfnews.com/report-by-gn">Report by GN</a>
+        <a href="https://gulfnews.com/advertise-with-us">Advertise</a>
+        <a href="https://gulfnews.com/privacy-policy">Privacy Policy</a>
+        <a href="https://gulfnews.com/contact">Contact Us</a>
+        <a href="https://gulfnews.com/newsletter">Newsletters</a>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Gulf News. Al Nisr Publishing LLC. All rights reserved.</span>
+        <div class="footer-social">
+          <span>Find us on social</span>
+          <a href="https://twitter.com/gulf_news">𝕏</a>
+          <a href="https://www.facebook.com/gulfnews">f</a>
+          <a href="https://www.instagram.com/gaborneplus/">📷</a>
+          <a href="https://www.youtube.com/gaborneplus">▶</a>
+          <a href="https://www.linkedin.com/company/gulf-news">in</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
